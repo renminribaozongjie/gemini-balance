@@ -19,6 +19,7 @@ async def check_for_updates() -> Tuple[bool, Optional[str], Optional[str]]:
             - Optional[str]: 如果有可用更新，则为最新的版本字符串，否则为 None。
             - Optional[str]: 如果检查失败，则为错误消息，否则为 None。
     """
+    return False, None, None
     try:
         with open(VERSION_FILE_PATH, 'r', encoding='utf-8') as f:
             current_v = f.read().strip()
